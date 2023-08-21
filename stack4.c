@@ -48,6 +48,7 @@ int firstdlt()
         top--;
         for(int i=0;i<=top;i++)
             a[i]=a[i+1];
+              
     }
 }
 int display()
