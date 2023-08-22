@@ -1,4 +1,3 @@
-if(z==a[i]){
-
-        printf("number is found");
+else {
+            printf("number is not found....");
         }
