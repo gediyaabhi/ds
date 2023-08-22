@@ -1,3 +1,4 @@
+// desending value
 #include<stdio.h>
 #define n 6
 int a[n]={50,48,35,33,13,5},x,l=0,h=n,mid;
