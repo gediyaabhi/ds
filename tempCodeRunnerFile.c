@@ -1,29 +1,41 @@
 #include<stdio.h>
-#define n 6
-int a[n]={50,48,35,33,13,5},x,l=0,h=n,mid;
-int find(int a[])
-{
-    printf("enter a value :");
-    scanf("%d",&x);
+#define n 5
+int a[n],f=-1,r=-1;
 
-    for(int i=0; l<=h;i++)
-    {
-        mid=(l+h)/2;
-        if(a[mid]==x)
-            return mid+1;       
-        else if(a[mid]>x)
-            l=mid+1;
-        else if(a[mid]<x)
-            h=mid-1;
-    }
-    return -1;
-}
-int main()
+int insertend(int val)
 {
-    int z;
-    z=find(a);
-    if(z>=0)
-        printf("number is found");
-    else
-        printf("number is not found");
+    if(r<0)
+    {
+        f = r = 0;
+        a[r]=val;
+    }
+    else if((r+1)%n ==f)
+    {
+        printf("Queue is full ... \n");
+    }
+    else {
+        r=(r+1)%n;
+        a[r]=val;
+    }
+}
+
+int display()
+{
+    int i=f;
+    if(f<0)
+    {
+        printf("Queue is empty");
+    }
+    else {
+        do{
+            printf("%d",a[i]);
+            i = (i+1) % n;
+        }
+        while(i != (r+1)%n);
+    }
+}
+
+int main ()
+{
+    display();
 }

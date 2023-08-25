@@ -4,6 +4,7 @@ int a[n],f=-1,r=-1;
 
 int insertend(int val)
 {
+   
     if(r<0)
     {
         f = r = 0;
@@ -36,7 +37,7 @@ int display()
     int i=f;
     if(f<0)
     {
-        printf("Queue is empty");
+        printf("Queue is empty \n");
     }
     else {
         do{
@@ -49,19 +50,34 @@ int display()
 
 int main ()
 {
-    // insertend(10);
-    // insertend(20);
-    // insertend(30);
-    // insertend(40);
-    // insertend(50);
+    int ch,val;
 
-    dlt();
-    dlt();
-    dlt();
-    // insertend(60);
-    // insertend(70);
-    // dlt();
-    // dlt();
+    do{
 
-    display();
+        printf(" enter a choice number :");
+        scanf("%d",&ch);
+        switch (ch)
+        {
+            case 1:
+            printf("Enter a value ");
+            scanf("%d",&val);
+            insertend(val);
+            break;
+
+            case 2:
+                dlt();
+            break;
+
+            case 3:
+                display();
+            break;
+            
+            case 4:
+                break;
+            default:
+                break;
+        }
+    }
+    while(ch!=4);
+    
 }
