@@ -13,9 +13,7 @@ int find(int a[])
         }
     }
     return -1;
-
 }
-
 int main()
 {
     int i;

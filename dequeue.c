@@ -47,10 +47,6 @@ int dlt()
     { 
         f = r = -1; 
     } 
-    // else if (r == 0) 
-    // { 
-    //     r = n - 1; 
-    // } 
     else 
     { 
         r--; 
@@ -67,10 +63,6 @@ int firstdlt()
     { 
         f = r = -1; 
     } 
-    // else if (r == 0) 
-    // { 
-    //     r = n - 1; 
-    // } 
     else 
     { 
        f++; 
