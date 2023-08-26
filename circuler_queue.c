@@ -22,13 +22,21 @@ int insertend(int val)
 
 int dlt()
 {
-    if(f<0)
+   if (f == -1)
     {
-        printf("Queue is empty.....");
+        printf("queue is empty.\n");
     }
-    else 
+    else if (f == r)
     {
-        f++;
+        f = r = -1;
+    }
+    else if (r == 0)
+    {
+        r = n - 1;
+    }
+    else
+    {
+        r--;
     }
 }
 
