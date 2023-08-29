@@ -1,67 +1,29 @@
 #include<stdio.h>
 #define n 5
-int a[n],f=-1,r=-1;
-
-int insertend(int val)
+    int a[n],i,x,l=0,h=n,mid;
+int find (int a[])
 {
-    if(r<0)
+    for(int i=0; l<=h;i++)
     {
-        f = r = 0;
-        a[r]=val;
+        mid=(l+h)/2;
+        if(a[mid]==x)
+            return mid+1;       
+        else if(a[mid]>x)
+            l=mid+1;
+        else if(a[mid]<x)
+            h=mid-1;
     }
-    else if((r+1)%n ==f)
-    {
-        printf("Queue is full ... \n");
-    }
-    else {
-        r=(r+1)%n;
-        a[r]=val;
-    }
+    return -1;
 }
 
-int dlt()
+
+int main()
 {
-    if(f<0)
-    {
-        printf("Queue is empty.....");
-    }
-    else 
-    {
-        f++;
-    }
-}
+    int i;
+    for(i=0;i<n;i++)
+a[i]=(rand()%99)+1;    
+    for(i=0;i<n;i++)
+        printf("%d ",a[i]);
 
-int display()
-{
-    int i=f;
-    if(f<0)
-    {
-        printf("Queue is empty");
-    }
-    else {
-        do{
-            printf("%d ",a[i]);
-            i = (i+1) % n;
-        }
-        while(i != (r+1)%n);
-    }
-}
-
-int main ()
-{
-    // insertend(10);
-    // insertend(20);
-    // insertend(30);
-    // insertend(40);
-    // insertend(50);
-
-    dlt();
-    dlt();
-    dlt();
-    // insertend(60);
-    // insertend(70);
-    // dlt();
-    // dlt();
-
-    display();
+        find(a);
 }
