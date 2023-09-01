@@ -23,7 +23,6 @@ int main()
 
     d.ch='d';
     d.data=200;
-
     d.ptr=NULL;
 
     printf(" A Data : %d \tchar : %c ", a.data,a.ch);
@@ -36,7 +35,7 @@ int main()
     c.ptr=&d;
     d.ptr=&c;
     printf("\n\n\n B Data : %d \tchar : %c ",a.ptr->data, a.ptr->ch);
-    printf("\n A Data : %d \t char : %c ", b.ptr->data,b.ptr->ch);
-    printf("\n C data : %d \t char : %c", d.ptr->data,d.ptr->ch);
+    printf("\n A Data : %d \tchar : %c ", b.ptr->data,b.ptr->ch);
+    printf("\n C data : %d \tchar : %c", d.ptr->data,d.ptr->ch);
     printf("\n D data : %d \tchar : %c",c.ptr->data,c.ptr->ch);
 }

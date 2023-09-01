@@ -9,7 +9,7 @@ struct node
 
 struct node *head = NULL;
 
-void display ()
+void display()
 {
     struct node *ptr=head;
     if(head==NULL)
@@ -17,7 +17,7 @@ void display ()
     
     else 
     {
-        while(ptr=NULL)
+        while(ptr!=NULL)
         {
             printf("%d",ptr->data);
             ptr=ptr->next;
@@ -74,5 +74,8 @@ int main ()
     insertend(10);
     insertend(20);
     insertend(30);
+    display();
+    
+    deleteEnd();
     display();
 }
